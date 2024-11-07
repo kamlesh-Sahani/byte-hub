@@ -28,11 +28,11 @@ const McqsBox = () => {
         <div className="flex flex-col gap-10 mt-2">
             <h1 className="font-semibold text-2xl">MCQ Questions</h1>
             {mcqQuestions.map((question) => (
-                <div
+                <ol
                     key={question.id}
-                    className="w-[500px] "
+                    className="w-[500px] list-decimal"
                 >
-                    <h2 className="text-lg font-semibold text-gray-800 mb-4">{question.question}</h2>
+                    <li className="text-lg font-semibold text-gray-800 mb-4">{question.question}</li>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {question.options.map((option) => (
                             <button
@@ -57,7 +57,7 @@ const McqsBox = () => {
                                 : "Incorrect. Try again."}
                         </p>
                     )}
-                </div>
+                </ol>
             ))}
         </div>
     )
